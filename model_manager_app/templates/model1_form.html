@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de Previsão de Empréstimo</title>
+</head>
+<body>
+    <h2>Formulário de Previsão de Empréstimo</h2>
+    <form method="post">
+        <label for="loan_amount">Loan Amount:</label>
+        <input type="number" id="loan_amount" name="loan_amount" required><br><br>
+
+        <label for="term">Term:</label>
+        <input type="number" id="term" name="term" required><br><br>
+
+        <label for="property_value">Property Value:</label>
+        <input type="number" id="property_value" name="property_value" step="0.01" required><br><br>
+
+        <label for="occupancy_type">Occupancy Type:</label>
+        <select id="occupancy_type" name="occupancy_type" required>
+            <option value="ir">Junior</option>
+            <option value="pr">Pleno</option>
+            <option value="sr">Senior</option>
+        </select><br><br>
+
+        <label for="income">Income:</label>
+        <input type="number" id="income" name="income" step="1" required><br><br>
+
+        <label for="Credit_Score">Credit Score:</label>
+        <input type="number" id="Credit_Score" name="Credit_Score" step="1" required><br><br>
+
+        <label for="age">Age:</label>
+        <select  id="age" name="age" required>
+            <option value="<25"><25</option>
+            <option value="25-34">25-34</option>
+            <option value="35-44">35-44</option> 
+            <option value="45-54">45-54</option> 
+            <option value="55-64">55-64</option> 
+            <option value="65-74">65-74</option>  
+            <option value=">74">>74</option> 
+       </select><br><br>
+        
+       <label for="Gender">Gender:</label>
+        <select id="Gender" name="Gender" required>
+            <option value="Joint">Joint</option>
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+            <option value="Sex Not Available">Sex Not Available</option>
+        </select><br><br>
+    
+        <label for="Region">Region:</label>
+        <select id="Region" name="Region" required>
+            <option value="North-East">North-East</option>
+            <option value="central">central</option>
+            <option value="south">south</option>
+            <option value="North">North</option>
+        </select><br><br>
+
+       
+        <label for="approv_in_adv">Approval in Advance:</label>
+        <select id="approv_in_adv" name="approv_in_adv" required>
+            <option value="nopre">No Pre-Approval</option>
+            <option value="pre">Pre-Approval</option>
+        </select><br><br>
+
+        <label for="loan_type">Loan Type:</label>
+        <select id="loan_type" name="loan_type" required>
+            <option value="type1">Type 1</option>
+            <option value="type2">Type 2</option>
+            <option value="type3">Type 3</option>
+        </select><br><br>
+
+        <label for="loan_purpose">Loan Purpose:</label>
+        <select id="loan_purpose" name="loan_purpose" required>
+            <option value="p1">Purchase</option>
+            <option value="p2">Refinance</option>
+            <option value="p3">Home Improvement</option>
+            <option value="p4">Other</option>
+        </select><br><br>
+
+        <label for="Neg_ammortization">Negative Amortization:</label>
+        <select id="Neg_ammortization" name="Neg_ammortization" required>
+            <option value="neg_amm">Negative Amortization</option>
+            <option value="not_neg">Not Negative Amortization</option>
+        </select><br><br>
+
+        <label for="credit_type">Credit Type:</label>
+        <select id="credit_type" name="credit_type" required>
+            <option value="CIB">CIB</option>
+            <option value="CRIF">CRIF</option>
+            <option value="EQUI">EQUI</option>
+            <option value="EXP">EXP</option>
+        </select><br><br>
+
+        <label for="co_applicant_credit_type">Co-Applicant Credit Type:</label>
+        <select id="co_applicant_credit_type" name="co_applicant_credit_type" required>
+            <option value="CIB">CIB</option>
+            <option value="EXP">EXP</option>
+        </select><br><br>
+
+        <label for="submission_of_application">Submission of Application:</label>
+        <select id="submission_of_application" name="submission_of_application" required>
+            <option value="not_inst">Not Institution</option>
+            <option value="to_inst">To Institution</option>
+        </select><br><br>
+
+        <input type="submit" value="Enviar">
+    </form>
+
+    
+</body>
+</html>
