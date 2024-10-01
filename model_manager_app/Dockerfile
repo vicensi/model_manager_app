@@ -1,5 +1,5 @@
 # Use uma imagem base oficial do Python
-FROM python:3.8-slim-buster
+FROM python:3.9-slim
 
 # Defina o diretório de trabalho dentro do contêiner
 WORKDIR /app
@@ -8,10 +8,19 @@ WORKDIR /app
 COPY requirements.txt requirements.txt
 
 # Instale as dependências
-RUN pip install -r requirements.txt
+RUN pip install --upgrade pip && \
+    pip install --no-cache-dir -r requirements.txt
 
-# Copie todo o conteúdo do projeto para o contêiner
-COPY . .
+# Copie os arquivos da API para o container
+COPY app.py /app/app.py
+COPY templates /app/templates
+COPY cluster_analysis.csv /app/cluster_analysis.csv
+COPY modelo_LogisticRegression.pkl /app/modelo_LogisticRegression.pkl
+COPY preprocessor_Log.pkl /app/preprocessor_Log.pkl
+COPY modelo_kmeans.pkl /app/modelo_kmeans.pkl
+COPY preprocessor.pkl /app/preprocessor.pkl
+COPY models.py /app/models.py
+COPY pipeline_completo.pkl /app/pipeline_completo.pkl
 
 # Exporte a porta 80
 EXPOSE 80
